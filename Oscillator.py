@@ -1,0 +1,13 @@
+#SE IMPORTA LA LIBRERÍA DE WiringPI
+#PARA EL MANEJO DE GPIO
+import wiringpi as wp
+#PIN ALMACENA EL PIN A UTILIZAR
+PIN=1 
+wp.wiringPiSetupGpio()
+#CONFIGURAMOS EL PIN COMO SALIDA
+wp.pinMode(PIN, 1)
+#CREAMOS UN LOOP QUE ALTERNA EL VALOR
+#DEL PIN CONSTANTEMENTE
+while (True):
+   wp.digitalWrite(PIN, 1)
+   wp.digitalWrite(PIN, 0)
