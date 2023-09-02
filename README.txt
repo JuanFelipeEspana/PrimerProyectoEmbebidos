@@ -1,0 +1,7 @@
+En la presente carpeta, es posible encontrar 4 archivos diferentes que cumplen con diferentes fines. 3 de ellos, especifícamente bashOscillator.sh, C_oscillator.c y Oscillator.py, permiten hacer oscilar digitalmente un pin de la Raspberry Pi a máxima velocidad, con el fin de caracterizar mediante la frecuencia de operación, las distintas implementaciones.
+
+ El código de bash, bashOscillator.sh, requiere de un argumento de entrada, que corresponde al pin GPIO que desea ser utilizado como oscilador. Oscillator.py contiene una variable llamada PIN en la que se puede definir el GPIO deseado para funcionar como oscilador. Mientras que, para cambiar el pin en el código de C, es necesario reemplazar en cada coincidencia el número 18 por el GPIO requerido. Además para correr el código de Python es necesario contar con la librería wiringPi que se puede instalar con pip, y para el código de C, es necesario agregar la librería d BCM2835, que permite acceder a los pines de la tarjeta.
+
+Por otro lado, el código readTemp.sh espera una ruta donde almacenar datos de temperatura, referenciados temporalmente. Los datos de temperatura, son adquiridos a partir de una sonda DS18B20 que se comunica con la Raspberry Pi mediante protocolo OneWire, por lo que es necesario correrlo con permisos de superusuario, para poder acceder al archivo que contiene la lectura del valor del sensor.
+
+Como ejemplo del funcionamiento de este último código, se encuentra el resultado de una recolección de datos tomados usando la Raspberry Pi, archivo llamado 2023-09-02_TEMPERATURA.csv.
